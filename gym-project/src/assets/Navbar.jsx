@@ -2,22 +2,22 @@ import { useState } from "react";
 import logo from "../images/logo.png";
 
 function App() {
-  // create navbar
-  const [navbar, setNavbar] = useState(false);
+  //   // create navbar
+  //   const [navbar, setNavbar] = useState(false);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
+  //   const changeBackground = () => {
+  //     if (window.scrollY >= 80) {
+  //       setNavbar(true);
+  //     } else {
+  //       setNavbar(false);
+  //     }
+  //   };
 
-  window.addEventListener("scroll", changeBackground);
+  //   window.addEventListener("scroll", changeBackground);
 
   return (
     <>
-      <nav className={navbar ? "navbar active" : "navbar"}>
+      <nav className="navbar navbar-active">
         <img src={logo} alt="logo" className="navbar-logo" />
         <ul className="navbar-links">
           <li>
