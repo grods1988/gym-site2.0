@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -7,7 +8,9 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <h1>are you ready for changes?</h1>
-          <button className="footer-btn">join us</button>
+          <Link to="/signup">
+            <button className="footer-btn">make it happen</button>
+          </Link>
         </div>
         <div className="footer-bottom">
           <div className="footer-item">

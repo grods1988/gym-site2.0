@@ -1,54 +1,46 @@
 import { useState } from "react";
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 
 function App() {
-  //   // create navbar
-  //   const [navbar, setNavbar] = useState(false);
-
-  //   const changeBackground = () => {
-  //     if (window.scrollY >= 80) {
-  //       setNavbar(true);
-  //     } else {
-  //       setNavbar(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", changeBackground);
-
   return (
     <>
       <nav className="navbar navbar-active">
-        <img src={logo} alt="logo" className="navbar-logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="navbar-logo" />
+        </Link>
         <ul className="navbar-links">
           <li>
-            <a className="navbar-link" href="#home">
+            <Link className="navbar-link" to="/">
+              home
+            </Link>
+          </li>
+          <li>
+            <Link className="navbar-link" to="/classes">
               classes
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="navbar-link" href="#about">
+            <Link className="navbar-link" to="/personalworkouts">
               personal workouts
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="navbar-link" href="#services">
+            <Link className="navbar-link" to="/pricesandplans">
               prices & plans
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="navbar-link" href="#contact">
+            <Link className="navbar-link" to="/schedule">
               Schedule
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="navbar-link" href="#contact">
+            <Link className="navbar-link" to="/signup">
               Sign up
-            </a>
+            </Link>
           </li>
         </ul>
-        <div>
-          <i className="fa-solid fa-bars navbar-toggle navbar-toggle-icon"></i>
-        </div>
       </nav>
     </>
   );

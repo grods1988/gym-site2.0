@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import about from "../images/about.avif";
 
 function About() {
@@ -15,7 +16,9 @@ function About() {
           on your fitness journey, come in and speak to one of our qualified
           trainers who can help you develop a plan.
         </p>
-        <button className="about-btn">Schedule</button>
+        <Link to="/schedule">
+          <button className="about-btn">Schedule</button>
+        </Link>
       </div>
       <img src={about} alt="about" className="about-img" />
     </section>

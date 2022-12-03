@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  background: #1a1a1a;
+  background: #000000;
 }
 
 /* set navbar style */
@@ -12,11 +12,11 @@
   top: -1px;
   z-index: 10;
   height: 80px;
-  background: #1a1a1a;
+  background: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  height: 3rem;
   text-transform: capitalize;
   font-weight: 700;
   padding: 2rem;
@@ -33,16 +33,18 @@
 .navbar-links {
   display: flex;
   list-style: none;
-  padding: 0 2rem;
+  gap: 2rem;
+
+  /* background: #646cff; */
 }
 
 /* set navbar links */
 .navbar-links a {
   margin-left: 2rem;
-  font-size: 1.55rem;
+  font-size: 1.9rem;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s linear;
+  transition: all 0.6s ease-in-out;
 }
 
 /* set navbar links hover */
@@ -53,6 +55,7 @@
 /* set navbar links active */
 .navbar-links a.active {
   color: #faeb67;
+  border-bottom: #ffe601 1px solid;
 }
 
 /* add mediaqueries for navbar */
@@ -75,6 +78,8 @@
     margin-left: 0;
   }
 }
+
+/* Home Content */
 
 .home-content {
   display: flex;
@@ -114,7 +119,6 @@
   letter-spacing: 0.1rem;
   position: relative;
   top: 40%;
-  /* set opacity to background */
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;
   border-radius: 8px;
@@ -274,11 +278,11 @@
   top: 0%;
 }
 .classes-desc {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+
   margin-bottom: 2rem;
   line-height: 1.2;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.1rem;
   position: relative;
   top: 0%;
@@ -306,7 +310,6 @@
   position: relative;
   top: 20%;
   margin: auto;
-  /* left: 10%; */
 }
 .check-classes:hover {
   transform: scale(1.1);
@@ -316,7 +319,7 @@
 }
 
 /* set classes responsive */
-@media screen and (max-width: 768px) and {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .classes-container {
     flex-direction: column;
     justify-content: center;
@@ -337,9 +340,10 @@
   .classes-btn {
     font-size: 1.5rem;
   }
+}
 
-  /* add responsive for 480px and 320px */
-  /* .classes-card {
+/* add responsive for 480px and 320px */
+/* .classes-card {
     width: 100%;
     height: auto;
     text-align: center;
@@ -366,7 +370,6 @@
     color: #000;
     background: #ffe601;
   } */
-}
 
 /* about-info */
 .about-info {
@@ -661,5 +664,188 @@
   }
   .footer-socials-icons {
     font-size: 3rem;
+  }
+}
+
+/* All classes */
+.page-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  color: #fff;
+  padding: 3rem 5rem;
+  text-decoration: underline;
+  text-decoration-color: #ffe600;
+}
+.singleClass {
+  color: white;
+  font-size: 3rem;
+  text-decoration: underline;
+  text-decoration-color: #ffe600;
+  text-transform: capitalize;
+  text-align: left;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 0;
+  gap: 05rem;
+  /* background: #646cff; */
+  padding-top: 10rem;
+}
+.image {
+  width: 40%;
+}
+.image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem;
+  }
+  .image {
+    width: 100%;
+  }
+}
+
+/*  */
+/* Personal workouts */
+.page-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  color: #fff;
+  padding: 3rem 5rem;
+  text-decoration: underline;
+  text-decoration-color: #ffe600;
+}
+
+.trainers-content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem 0;
+  /* background: #646cff; */
+}
+.trainers-reverse {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+.trainers-image {
+  width: 50%;
+  padding: 2rem 4rem;
+}
+.trainers-image img {
+  width: 80%;
+}
+.trainers-info {
+  width: 50%;
+  padding: 5rem;
+}
+.trainers-info h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  color: #fff;
+}
+.trainers-info p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.trainers-info button {
+  font-size: 16px;
+  background: #ffe600;
+  color: #000;
+  border: none;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  margin-top: 5rem;
+}
+.trainers-info button:hover {
+  /* background: rgb(236, 21, 21); */
+  color: rgb(254, 251, 251);
+}
+
+@media screen and (min-width: 328px) and (max-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  .trainers-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem;
+    width: 100%;
+  }
+  .trainers-reverse {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .trainers-image img {
+    width: 100%;
+  }
+
+  .trainers-info {
+    text-align: center;
+  }
+  .trainers-info h3 {
+    font-size: 2rem;
+  }
+  .trainers-info p {
+    font-size: 1rem;
+  }
+  .trainers-info button {
+    font-size: 1rem;
+    padding: 1rem 1rem;
   }
 }

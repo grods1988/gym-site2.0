@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import card1 from "../images/zumba.avif";
 import card2 from "../images/pilates.avif";
 import card3 from "../images/bodybuilding.avif";
 import card4 from "../images/crossfit.avif";
+import classes5 from "../images/classes5.avif";
 
 function Classes() {
   return (
@@ -19,11 +21,11 @@ function Classes() {
             </p>
           </div>
           <div className="classes-card">
-            <img src={card2} alt="card2" className="classes-img" />
-            <h2 className="classes-name">Yoga</h2>
+            <img src={classes5} alt="card2" className="classes-img" />
+            <h2 className="classes-name">Cardio Boxing</h2>
             <p className="classes-desc">
-              Yoga is a group of physical, mental, and spiritual practices or
-              disciplines which originated in ancient India.
+              Cardio boxing uses a combination of shadowboxing and/or hitting
+              the bag with continuous cardio movements to burn calories.
             </p>
           </div>
           <div className="classes-card">
@@ -43,7 +45,9 @@ function Classes() {
             </p>
           </div>
         </div>
-        <button className="check-classes btn">check all classes</button>
+        <Link to="/classes">
+          <button className="check-classes ">check all classes</button>
+        </Link>
       </div>
     </section>
   );
