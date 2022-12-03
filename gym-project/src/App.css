@@ -99,14 +99,19 @@
 }
 
 .home-content-title {
-  font-size: 8rem;
-  font-weight: 700;
+  font-size: 84px;
   margin-bottom: 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   position: relative;
-  top: 0%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.span {
+  color: #ffe601;
+  /* text-transform: uppercase; */
 }
 
 /* set home-content-subtitle */
@@ -125,36 +130,19 @@
 }
 
 /* set home-content-btn */
-.home-content-btn {
-  font-size: 1.5rem;
-  font-weight: 500;
-  width: 20%;
-  padding: 2rem 2rem;
-  border: none;
+.home-link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 1rem 2rem;
   border-radius: 8px;
-  background: #ffe600;
-  color: #000;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: #fff;
   transition: all 0.6s ease-in-out;
-  cursor: pointer;
   position: relative;
-  top: 0%;
-  left: 0%;
+  top: 40%;
 }
-
-/* set home-content-btn hover */
-.home-content-btn:hover {
-  transform: scale(1.1);
-  outline: #646cff;
-  background: #ecd610;
-  color: #000;
-}
-
 /* set home-content-btn active */
-.home-content-btn:active {
-  transform: scale(0.9);
-}
+
 @media screen and (max-width: 1440px) {
   .home-content {
     padding: 0;
@@ -165,10 +153,11 @@
   .home-content-subtitle {
     font-size: 1.5rem;
   }
-  .home-content-btn {
+  .home-link {
     font-size: 1rem;
     margin-top: 2rem;
-    width: 50%;
+    width: 30%;
+    padding: 0px;
   }
 }
 
@@ -196,8 +185,8 @@
     font-size: 1.5rem;
     display: none;
   }
-  .home-btn {
-    font-size: 1.5rem;
+  .home-link {
+    font-size: 1rem;
   }
   #home {
     background: url("./images/mainbg.avif");
@@ -208,7 +197,7 @@
 }
 
 /* add mediaqueries for home-info */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and(max-width: 480px) {
   .home-content h1 {
     font-size: 2rem;
   }
@@ -216,7 +205,7 @@
     font-size: 1rem;
   }
   .home-btn {
-    font-size: 1rem;
+    font-size: 0.78rem;
   }
 }
 
@@ -226,15 +215,16 @@
 .classes-heading {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  background: #ffe601;
-  opacity: 1;
-  color: #000;
-  padding: 3rem;
+  color: #ffe601;
+  text-decoration: underline #ffe601;
+  padding: 2rem;
   border-radius: 8px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .classes-container {
@@ -251,8 +241,8 @@
   flex-basis: 20rem;
   margin-bottom: 2rem;
   border-radius: 8px;
-  background: #ffe600;
-  color: #000;
+  /* background: #ffe600; */
+  color: #ffe601;
   padding: 1rem;
   border-radius: 8px;
 }
@@ -276,6 +266,8 @@
   letter-spacing: 0.1rem;
   position: relative;
   top: 0%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .classes-desc {
   font-size: 1.3rem;
@@ -512,7 +504,7 @@
   text-align: left;
 }
 .footer-top h1 {
-  font-size: 4rem;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 4rem;
   line-height: 1.2;
@@ -595,9 +587,6 @@
   margin-bottom: 2rem;
   line-height: 1;
   text-transform: capitalize;
-  position: relative;
-  top: 0%;
-  left: 0%;
   color: #fff;
 }
 
@@ -848,4 +837,101 @@
     font-size: 1rem;
     padding: 1rem 1rem;
   }
+}
+
+/* Prices  Plans */
+
+.prices-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 10rem 2rem;
+}
+.prices-content-item {
+  display: flex;
+  flex-direction: column;
+  /* background: #000; */
+  padding: 2rem;
+}
+.prices-content-item-price {
+  align-items: left;
+  justify-content: center;
+  text-transform: uppercase;
+  word-spacing: 100px;
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-color: #ffe600;
+}
+.prices-content-item-description {
+  align-items: left;
+  font-size: 2rem;
+}
+.prices-content-item-description ul {
+  list-style: none;
+  line-height: 3rem;
+  padding: 0;
+  margin: 0;
+  /* font-family: "Roboto", sans-serif; */
+  font-size: 1.5rem;
+}
+.prices-content-item-description h3 {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .prices-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem;
+  }
+  .prices-content-item {
+    width: 100%;
+    text-align: center;
+  }
+  .prices-content-item-price {
+    font-size: 2rem;
+  }
+  .prices-content-item-description {
+    font-size: 1rem;
+  }
+}
+
+/* Schedule */
+.schedule-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding: 4rem 5rem;
+}
+.schedule-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.schedule-grid-item h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding: 4rem 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  color: #fff;
+}
+.schedule-grid-item p {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: #fff;
 }

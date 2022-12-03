@@ -9,12 +9,12 @@ function Home() {
       <section id="home">
         <div className="home-content">
           <h1 className="home-content-title">
-            It's all about what you can achieve
+            It's all about what <span className="span">you</span> can achieve
           </h1>
           <p className="home-content-subtitle">
             empower yourself with the best fitness classes in town.
           </p>
-          <Link to="/classes" className="">
+          <Link to="/classes" className="home-link">
             <button className="">Lets Get started</button>
           </Link>
         </div>
